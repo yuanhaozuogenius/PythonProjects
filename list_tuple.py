@@ -1,4 +1,6 @@
 # list test
+import sys
+
 classmates = ['Michael', 'Bob', 'Tracy']
 print("列表 list =", classmates)
 print(classmates[-1])
@@ -35,15 +37,38 @@ print(L[1][1])
 # 打印Lisa:
 print(L[-1][-1])
 
+# iter method1
+for person in L:
+    for name in person:
+        print(name)
 
-# 创建学生类
-class Stu():
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+# print 1-100
+print("list:", list(range(100)))
+x = 0
+for i in range(101):
+    x = x + i
+print(x)
 
+# if elif test
+age = 20
+if age >= 6:
+    print('teenager')
+elif age >= 18:
+    print('adult')
+else:
+    print('kid')
 
-s = Stu("张三", 18)
-print(type(s))
-print(str(s))
-print(s)
+# iter exerise
+persons = ['Bart', 'Lisa', 'Adam']
+for person in persons:
+    print("hello,", person.title())
+
+if hasattr(sys, "set_int_max_str_digits"):
+    upper_bound = 68000
+    lower_bound = 4004
+    current_limit = sys.get_int_max_str_digits()
+    if current_limit == 0 or current_limit > upper_bound:
+        sys.set_int_max_str_digits(upper_bound)
+    elif current_limit < lower_bound:
+        sys.set_int_max_str_digits(lower_bound)
+
