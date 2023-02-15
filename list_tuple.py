@@ -23,7 +23,7 @@ print(type(classmates[2][0]))
 roommates = ('Michael', 'Bob', 'Tracy')
 t = (1,)
 print("\ntype is ", type(t))
-
+print(roommates[1], "\n")
 # exercise
 L = [
     ['Apple', 'Google', 'Microsoft'],
@@ -31,16 +31,16 @@ L = [
     ['Adam', 'Bart', 'Lisa']
 ]
 # 打印Apple:
-print("\n", L[0][0])
+print(L[0][0])
 # 打印Python:
 print(L[1][1])
 # 打印Lisa:
-print(L[-1][-1])
+print(L[-1][-1], "\n")
 
 # iter method1
 for person in L:
     for name in person:
-        print(name)
+        print(name, "\t")
 
 # print 1-100
 print("list:", list(range(100)))
@@ -53,13 +53,13 @@ print(x)
 age = 20
 if age >= 6:
     print('teenager')
-elif age >= 18:
+elif 6 <= age <= 18:
     print('adult')
 else:
     print('kid')
 
 # iter exerise
-persons = ['Bart', 'Lisa', 'Adam']
+persons = ['bart', 'lisa', 'adam']
 for person in persons:
     print("hello,", person.title())
 
@@ -71,4 +71,3 @@ if hasattr(sys, "set_int_max_str_digits"):
         sys.set_int_max_str_digits(upper_bound)
     elif current_limit < lower_bound:
         sys.set_int_max_str_digits(lower_bound)
-
