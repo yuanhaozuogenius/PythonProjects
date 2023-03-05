@@ -61,7 +61,7 @@ else:
 # iter exerise
 persons = ['bart', 'lisa', 'adam']
 for person in persons:
-    print("hello,", person.title())
+    print("hello, person.title() is:", person.title())
 
 if hasattr(sys, "set_int_max_str_digits"):
     upper_bound = 68000
