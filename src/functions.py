@@ -1,4 +1,7 @@
+import numpy
 import numpy as np
+from matplotlib import pyplot
+
 from utils import Common
 from utils.Common import height_in, weight_lb, baseball, baseball_2d
 
@@ -8,6 +11,8 @@ print(dir(pow))
 help(pow)
 help(str.count)
 help(sorted)
+# help(numpy.corrcoef)
+# help(pyplot.scatter)
 
 print(sorted(Common.areasName), sorted(Common.areasName, reverse=True))
 
@@ -44,9 +49,10 @@ print("baseball_2d.shape:", np_baseball_2d.shape)
 np_baseball_2d_first_ten_item = np_baseball_2d[:10, ]
 print("baseball_2d.index[:10, :]:\n", np_baseball_2d_first_ten_item, "the shape like",
       np_baseball_2d_first_ten_item.shape)
-print(np_baseball_2d_first_ten_item[1])
-print(np_baseball_2d_first_ten_item[1, ])
-print(np_baseball_2d_first_ten_item[0, 1])
+print("打印第2行：", np_baseball_2d_first_ten_item[1])
+print("打印第2列：", np_baseball_2d_first_ten_item[:, 1])
+print("打印第1行：", np_baseball_2d_first_ten_item[0, ])
+print("打印第1行第2个元素：", np_baseball_2d_first_ten_item[0, 1])
 ''' bmiLightDic[0][0] = bmiTuple(0)
     bmiLightDic[0][1] = lightList(0)
     
