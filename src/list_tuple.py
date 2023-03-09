@@ -1,6 +1,8 @@
 # list test
 import sys
 
+from utils.Common import areas
+
 classmates = ['Michael', 'Bob', 'Tracy']
 print("列表 list =", classmates)
 print(classmates[-1])
@@ -58,8 +60,6 @@ Print both downstairs and upstairs using print().'''
 
 '''proper_slice的结构是"[下限]:[上限]:[步长]"'''
 
-areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
-
 # Use slicing to create downstairs
 downstairs = areas[0:6]
 
@@ -83,6 +83,7 @@ areas_1.append("garage")
 areas_1.append(15.45)
 areas_2 = areas_1
 print("areas_2:", areas_2)
+print("areas_2[:1]:", areas_2[:2])
 # [下限]>[上限]时，无任何改变
 del (areas_2[3:1])
 del (areas_2[-2:-4])
